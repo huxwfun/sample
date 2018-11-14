@@ -10,8 +10,12 @@
 
 集成reactstrap 使用bootstrap风格的button/modal/input等组件
 
-集成babel-plugin-root-import, 以便使用绝对路径
-import SomeExample from '../../../some/example.js';
- 
-import SomeExample from '~/some/example.js';
+使用ducks style的文件组织形式
 
+首页用来提示设计/使用方式
+
+进入首页后生成一个随机id, 按钮跳转到doc/{id}页面, 后续根据此id生成url和qrcode (展示router的使用)
+
+弹框内的内容在modules目录下, 作为一个和redux绑定的smart container
+
+pages/doc/index 是页面的入口, 本身是一个stateless function, 使用recomopose增加了open状态, 用来控制是否打开弹框
